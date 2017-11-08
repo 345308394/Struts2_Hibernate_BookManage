@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="bookmanage" extends="struts-default">
+		<!-- 配置Action --> 
+		<action name="*_*" class="action.{1}Action" method="{2}">
+			<result name="success">/WEB-INF/pages/{2}.jsp</result>
+			<result name="AllBook" type="redirect">Book_AllBooks</result>
+			<result name="DeleteBook" type="redirect">Book_AllBooks</result>
+			<result name="BookDetail" >/WEB-INF/pages/BookDetail.jsp</result>
+			<result name="BookUpdate" type="redirect">Book_AllBooks</result>
+		</action>
+	</package>
+</struts>
